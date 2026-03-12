@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zeni — AI Venue Concierge</title>
+<title>Zeni — Venue Concierge</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -502,7 +502,7 @@ body {
     Capture <span class="accent">every lead</span> and book
     <span class="accent">every tour</span> — automatically
   </h1>
-  <p class="hero-sub">Zeni is an AI concierge that lives on your venue website. She answers questions, qualifies leads, and books tours 24/7.</p>
+  <p class="hero-sub">Zeni is an automated concierge that lives on your venue website. She answers questions, qualifies leads, and books tours 24/7.</p>
   <div class="input-row">
     <input type="email" placeholder="Email address">
     <button class="btn-accent">Request Demo</button>
@@ -728,6 +728,7 @@ const obs = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.12 });
 sections.forEach(s => obs.observe(s));
+</script>
 <script src="https://zentrust-ai.github.io/zentrust-widget-cdn/widget-loader.js" data-venue-id="grand_manor" data-theme="zentrust"></script>
 </body>
 </html>
