@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zeni — Venue Concierge</title>
+<title>Zeni — AI Venue Concierge</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -11,13 +11,13 @@
 :root {
   --bg: #ffffff;
   --bg-soft: #f5f5f7;
-  --dark: #1a1a2e;
-  --dark-mid: #2d2d44;
+  --dark: #0d1117;
+  --dark-mid: #131b2e;
   --text: #1a1a2e;
   --text-secondary: #555;
   --text-muted: #999;
-  --accent: #d6336c;
-  --accent-hover: #c2255c;
+  --accent: #3a9fb0;
+  --accent-hover: #4dbbc9;
   --border: #e4e4e8;
   --font: 'Outfit', -apple-system, sans-serif;
 }
@@ -397,7 +397,7 @@ body {
   transition: all 0.2s;
 }
 .p-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.04); }
-.p-card.featured { border-color: var(--dark); }
+.p-card.featured { border-color: var(--accent); }
 .p-card-tier {
   font-size: 13px; font-weight: 600;
   text-transform: uppercase; letter-spacing: 0.8px;
@@ -428,9 +428,9 @@ body {
   cursor: pointer; transition: all 0.2s;
 }
 .p-card-btn-fill {
-  background: var(--dark); color: #fff; border: none;
+  background: var(--accent); color: #0d1117; border: none;
 }
-.p-card-btn-fill:hover { background: var(--dark-mid); }
+.p-card-btn-fill:hover { background: var(--accent-hover); color: #0d1117; }
 .p-card-btn-outline {
   background: transparent; color: var(--text);
   border: 1.5px solid var(--border);
@@ -502,7 +502,7 @@ body {
     Capture <span class="accent">every lead</span> and book
     <span class="accent">every tour</span> — automatically
   </h1>
-  <p class="hero-sub">Zeni is an automated concierge that lives on your venue website. She answers questions, qualifies leads, and books tours 24/7.</p>
+  <p class="hero-sub">Zeni is an AI concierge that lives on your venue website. She answers questions, qualifies leads, and books tours 24/7.</p>
   <div class="input-row">
     <input type="email" placeholder="Email address">
     <button class="btn-accent">Request Demo</button>
@@ -722,6 +722,7 @@ body {
     <a href="https://zentrust.net/privacy.html">Privacy</a>
   </div>
 </div>
+
 <script>
 const sections = document.querySelectorAll('.section');
 const obs = new IntersectionObserver((entries) => {
@@ -729,6 +730,5 @@ const obs = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 sections.forEach(s => obs.observe(s));
 </script>
-<script src="https://zentrust-ai.github.io/zentrust-widget-cdn/widget-loader.js" data-venue-id="grand_manor" data-theme="_default"></script>
 </body>
 </html>
