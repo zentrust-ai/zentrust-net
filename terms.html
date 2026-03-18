@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service — Zentrust AI</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif; background:#fafafa; color:#333; }
-    header {
-      background:#1a1a2e; color:white; padding:40px 24px;
-      text-align:center;
-    }
-    header a.logo {
-      font-size:22px; font-weight:700; color:white; text-decoration:none;
-      letter-spacing:0.5px;
-    }
-    header h1 { font-size:32px; font-weight:700; margin-top:24px; }
-    header p.updated { font-size:13px; opacity:0.6; margin-top:8px; }
-    .container {
-      max-width:720px; margin:0 auto; padding:48px 24px 80px;
-    }
-    h2 {
-      font-size:20px; font-weight:700; color:#1a1a2e; margin-top:40px; margin-bottom:12px;
-      padding-bottom:8px; border-bottom:2px solid #e8e8ed;
-    }
-    h2:first-of-type { margin-top:0; }
-    p, li {
-      font-size:15px; line-height:1.8; color:#555; margin-bottom:12px;
-    }
-    ul, ol { padding-left:24px; margin-bottom:16px; }
-    li { margin-bottom:8px; }
-    a { color:#1a1a2e; }
-    strong { color:#333; }
-    footer {
-      text-align:center; padding:32px 24px; font-size:12px; color:#999;
-      border-top:1px solid #e8e8ed;
-    }
-    footer a { color:#666; text-decoration:none; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Zentrust AI</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0d1117;
+  --surface:#131b2e;
+  --card:#1a2236;
+  --border:rgba(255,255,255,0.06);
+  --accent:#3a9fb0;
+  --accent-hover:#4dbbc9;
+  --text:rgba(255,255,255,0.85);
+  --text-sec:rgba(255,255,255,0.5);
+  --text-dim:rgba(255,255,255,0.25);
+  --font:'Outfit',-apple-system,BlinkMacSystemFont,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,17,23,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:16px 40px;display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-size:22px;font-weight:700;color:#fff;text-decoration:none;letter-spacing:1.5px}
+.nav-links{display:flex;gap:24px}
+.nav-links a{color:var(--text-sec);text-decoration:none;font-size:13px;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--accent)}
+
+/* HERO */
+.hero{padding:140px 40px 60px;text-align:center;background:linear-gradient(180deg,rgba(58,159,176,0.04) 0%,transparent 60%)}
+.hero h1{font-size:36px;font-weight:700;color:#fff;margin-bottom:12px}
+.hero p{font-size:14px;color:var(--text-sec)}
+
+/* CONTENT */
+.content{max-width:740px;margin:0 auto;padding:0 40px 80px}
+h2{font-size:18px;font-weight:600;color:#fff;margin:40px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+h2:first-of-type{margin-top:20px}
+p{font-size:14.5px;color:var(--text);margin-bottom:14px}
+ul{margin:0 0 16px 24px}
+li{font-size:14.5px;color:var(--text);margin-bottom:6px}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{color:#fff;font-weight:600}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px}
+th{text-align:left;padding:10px 14px;background:var(--surface);color:var(--text-sec);border:1px solid var(--border);font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:0.5px}
+td{padding:10px 14px;border:1px solid var(--border);color:var(--text)}
+
+/* FOOTER */
+.footer{text-align:center;padding:32px 40px;border-top:1px solid var(--border);font-size:12px;color:var(--text-dim)}
+.footer a{color:var(--text-sec);margin:0 8px}
+
+@media(max-width:600px){
+  .nav{padding:14px 20px}
+  .hero{padding:120px 20px 40px}
+  .hero h1{font-size:26px}
+  .content{padding:0 20px 60px}
+  h2{font-size:16px}
+}
+</style>
 </head>
 <body>
-<header>
-  <a href="https://zentrust.net" class="logo">Zentrust AI</a>
-  <h1>Terms of Service</h1>
-  <p class="updated">Last updated: March 10, 2026</p>
-</header>
 
-<div class="container">
+<nav class="nav">
+  <a href="https://zentrust.net" class="nav-logo">ZENI</a>
+  <div class="nav-links">
+    <a href="https://zentrust.net">Home</a>
+    <a href="https://zentrust.net/privacy.html">Privacy</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Terms of Service</h1>
+  <p>Last updated: March 17, 2026</p>
+</div>
+
+<div class="content">
 
 <h2>1. Acceptance of Terms</h2>
 <p>By accessing or using the Zentrust AI concierge platform ("Service"), including any chat widget embedded on a venue partner's website, you agree to be bound by these Terms of Service ("Terms"). If you do not agree, do not use the Service.</p>
@@ -71,15 +101,25 @@
   <li>Enable the venue to follow up with you regarding your interest</li>
   <li>Send you tour confirmations, reminders, and follow-up communications (if you opt in)</li>
 </ul>
-<p>For details on how your information is handled, please see our <a href="/privacy">Privacy Policy</a>.</p>
+<p>For details on how your information is handled, please see our <a href="https://zentrust.net/privacy.html">Privacy Policy</a>.</p>
 
 <h2>5. Tour Bookings</h2>
 <p>When you schedule a tour through the Service, a calendar event is created and a confirmation is sent to the email address you provide. Tour availability is subject to the venue's schedule. Zentrust AI is not responsible for venue availability, scheduling conflicts, or changes made by the venue.</p>
 
-<h2>6. Vendor Recommendations</h2>
+<h2>6. Payments and Deposits</h2>
+<p>Some venues may require a deposit to secure a tour or event booking. If a venue has enabled deposit collection through the Service:</p>
+<ul>
+  <li>Payments are processed securely through Stripe, a PCI-compliant third-party payment processor</li>
+  <li>Zentrust does not store your credit card information — all payment data is handled directly by Stripe</li>
+  <li>Deposit amounts, refund policies, and cancellation terms are set by the venue and will be clearly displayed before you complete payment</li>
+  <li>Zentrust charges a platform processing fee on transactions, which is included in the displayed amount</li>
+</ul>
+<p>For venues that do not require deposits, tour bookings are free and no payment is collected.</p>
+
+<h2>7. Vendor Recommendations</h2>
 <p>If you opt in to vendor recommendations, your contact information may be shared with trusted third-party wedding vendors (such as DJs, photographers, caterers, and event planners) who have partnered with the venue. This sharing only occurs with your explicit consent and can be withdrawn at any time by contacting us.</p>
 
-<h2>7. Communications</h2>
+<h2>8. Communications</h2>
 <p>If you opt in to follow-up communications, you may receive:</p>
 <ul>
   <li>Tour reminders and confirmations</li>
@@ -88,36 +128,38 @@
 </ul>
 <p>You may unsubscribe from these communications at any time by clicking the unsubscribe link included in every email, or by contacting us at <a href="mailto:support@zentrust.net">support@zentrust.net</a>.</p>
 
-<h2>8. AI-Generated Responses</h2>
+<h2>9. AI-Generated Responses</h2>
 <p>The chatbot uses artificial intelligence to generate responses. While we strive for accuracy, AI-generated responses may occasionally contain errors or outdated information. The information provided by the chatbot should not be considered a binding offer or contract. All pricing, availability, and venue details are subject to confirmation by the venue.</p>
 
-<h2>9. Intellectual Property</h2>
+<h2>10. Intellectual Property</h2>
 <p>All content, design, and technology associated with the Zentrust AI platform are the property of Zentrust and are protected by applicable intellectual property laws. You may not copy, modify, distribute, or reverse engineer any part of the Service.</p>
 
-<h2>10. Limitation of Liability</h2>
-<p>Zentrust AI is provided "as is" without warranties of any kind. To the fullest extent permitted by law, Zentrust shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Service, including but not limited to inaccurate information, missed bookings, or communication failures.</p>
+<h2>11. Limitation of Liability</h2>
+<p>Zentrust AI is provided "as is" without warranties of any kind. To the fullest extent permitted by law, Zentrust shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Service, including but not limited to inaccurate information, missed bookings, payment processing issues, or communication failures.</p>
 
-<h2>11. Indemnification</h2>
+<h2>12. Indemnification</h2>
 <p>You agree to indemnify and hold harmless Zentrust, its officers, employees, and partners from any claims, damages, or expenses arising from your use of the Service or violation of these Terms.</p>
 
-<h2>12. Modifications</h2>
+<h2>13. Modifications</h2>
 <p>We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated date. Your continued use of the Service after changes are posted constitutes acceptance of the modified Terms.</p>
 
-<h2>13. Termination</h2>
+<h2>14. Termination</h2>
 <p>We reserve the right to suspend or terminate your access to the Service at any time, without notice, for conduct that we believe violates these Terms or is harmful to other users, venue partners, or the Service.</p>
 
-<h2>14. Governing Law</h2>
-<p>These Terms shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of law provisions.</p>
+<h2>15. Governing Law</h2>
+<p>These Terms shall be governed by and construed in accordance with the laws of the State of Florida, without regard to its conflict of law provisions.</p>
 
-<h2>15. Contact</h2>
+<h2>16. Contact</h2>
 <p>If you have questions about these Terms, please contact us at:</p>
-<p><strong>Zentrust AI</strong><br>
-Email: <a href="mailto:support@zentrust.net">support@zentrust.net</a></p>
+<p><strong>Zentrust AI</strong><br>Email: <a href="mailto:support@zentrust.net">support@zentrust.net</a></p>
 
 </div>
 
-<footer>
-  <p>&copy; 2026 Zentrust AI. All rights reserved. · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms of Service</a></p>
-</footer>
+<div class="footer">
+  &copy; 2026 Zentrust AI. All rights reserved.
+  <a href="https://zentrust.net/privacy.html">Privacy Policy</a>
+  <a href="https://zentrust.net/terms.html">Terms of Service</a>
+</div>
+
 </body>
 </html>
